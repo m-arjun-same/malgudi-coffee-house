@@ -56,11 +56,24 @@ window.__loaderFailsafe = setTimeout(function () {
 
 <main id="top">
 
+<div class="hero-transition">
+  <!-- 3D cup layer: sticky stage over hero + figures, exits at formats -->
+  <div class="cup3d-layer" aria-hidden="true">
+    <div class="cup3d-sticky">
+      <div class="cup3d-float">
+        <div class="cup3d" id="cup3d">
+          <canvas class="cup3d__canvas" id="cupCanvas"></canvas>
+          <canvas class="cup3d__seq" id="cupSeq" width="480" height="625"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- 3 · HERO -->
   <section class="hero" data-header-theme="dark">
     <div class="container hero__inner">
       <p class="descriptor reveal">Coffee House — est. inside KPHB Metro Station</p>
-      <h1 class="hero__title reveal">Real filter coffee for ₹35, in the middle of your commute.</h1>
+      <h1 class="hero__title">Real filter coffee for ₹35, in the middle of your commute.</h1>
       <div class="hero__row">
         <a class="btn reveal" href="#menu-board" data-scroll>See the menu</a>
         <ul class="hero__points">
@@ -76,41 +89,11 @@ window.__loaderFailsafe = setTimeout(function () {
     </div>
   </section>
 
-  <!-- 3b · CUP STAGE (sticky scrub visual) -->
-  <section class="cupstage" id="cupstage" aria-label="At the counter">
-    <div class="cupstage__sticky">
-      <figure class="cupstage__frame">
-        <img class="cupstage__img cupstage__img--a" src="assets/img/counter-wide.jpg" alt="The Malgudi Coffee House counter inside KPHB Metro Station">
-        <img class="cupstage__img cupstage__img--b" src="assets/img/coffee-closeup.jpg" alt="Filter coffee served in a traditional tumbler and davara">
-        <div class="cupstage__tumbler" aria-hidden="true">
-          <svg viewBox="0 0 200 190" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="brass" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0" stop-color="#8a6d3f"/><stop offset=".28" stop-color="#e6c887"/><stop offset=".55" stop-color="#b28c4e"/><stop offset=".8" stop-color="#dfc084"/><stop offset="1" stop-color="#7d6236"/>
-              </linearGradient>
-              <linearGradient id="brassBowl" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0" stop-color="#7d6236"/><stop offset=".3" stop-color="#d9b96f"/><stop offset=".6" stop-color="#a37f42"/><stop offset="1" stop-color="#8a6d3f"/>
-              </linearGradient>
-            </defs>
-            <ellipse cx="100" cy="170" rx="74" ry="13" fill="#000" opacity=".35"/>
-            <path d="M30 128 Q100 152 170 128 L160 158 Q100 178 40 158 Z" fill="url(#brassBowl)"/>
-            <path d="M58 62 L70 128 Q72 140 84 140 L116 140 Q128 140 130 128 L142 62 Z" fill="url(#brass)"/>
-            <path d="M58 62 L142 62 L139 82 L61 82 Z" fill="#e9d096" opacity=".8"/>
-            <ellipse cx="100" cy="62" rx="42" ry="9" fill="#6d5327"/>
-            <ellipse cx="100" cy="60" rx="38" ry="7.5" fill="#4a2f1d"/>
-            <path d="M82 44 Q88 30 82 16 M100 46 Q106 32 100 18 M118 44 Q124 30 118 16" stroke="#f3f1e9" stroke-width="4" stroke-linecap="round" opacity=".85" fill="none"/>
-          </svg>
-        </div>
-        <figcaption class="cupstage__cap descriptor">Poured the old way — brass tumbler &amp; davara</figcaption>
-      </figure>
-    </div>
-  </section>
-
   <!-- 4 · IN EXACT FIGURES -->
   <section class="figures" id="story" data-header-theme="light">
     <div class="container">
       <p class="descriptor reveal">Our story, in exact figures</p>
-      <h2 class="h2 reveal">A little shop,<br>in exact figures</h2>
+      <h2 class="h2">A little shop,<br>in exact figures</h2>
       <div class="figures__grid">
         <article class="figure reveal"><div class="figure__num"><span data-count="4.7" data-decimals="1">0</span>★</div><p>Google rating for this tiny metro-station nook.</p></article>
         <article class="figure reveal"><div class="figure__num"><span data-count="120">0</span>+</div><p>Google reviews — and counting, one kaapi at a time.</p></article>
@@ -120,54 +103,69 @@ window.__loaderFailsafe = setTimeout(function () {
     </div>
   </section>
 
-  <!-- 5 · FORMATS → THREE WAYS TO TAKE A BREAK -->
-  <section class="formats" data-header-theme="light">
-    <div class="container">
-      <p class="descriptor reveal">Three ways to take a break</p>
-      <h2 class="h2 reveal">Pick your pause</h2>
-      <div class="formats__list">
-        <article class="format" data-format-slide>
-          <figure class="format__img"><img src="assets/img/coffee-closeup.jpg" alt="Filter coffee in a tumbler" loading="lazy"></figure>
-          <div class="format__body">
-            <div class="format__head"><h3>Kaapi &amp; Tea</h3><span class="format__idx">01 / 03</span></div>
-            <ul class="format__rows">
+  <!-- 5 · FORMATS → THREE WAYS TO TAKE A BREAK (pinned stacking slides) -->
+  <section class="formats" data-header-theme="light" style="--formats-count:3">
+    <div class="formats__inner">
+      <article class="format-slide" style="--slide-bg:var(--white)">
+        <div class="format-slide__reveal">
+          <figure class="format-slide__img"><img src="assets/img/coffee-closeup.jpg" alt="Filter coffee in a tumbler" loading="lazy"></figure>
+          <div class="format-slide__content">
+            <p class="descriptor">Three ways to take a break</p>
+            <div class="format-slide__head"><h2>Kaapi &amp; Tea</h2><span class="format-slide__idx">01 / 03</span></div>
+            <ul class="format-slide__rows">
               <li><span>Star pour</span><strong>Filter Coffee · ₹35</strong></li>
               <li><span>Teas from</span><strong>₹25</strong></li>
               <li><span>Comfort cup</span><strong>Hot Badam Milk · ₹40</strong></li>
             </ul>
           </div>
-        </article>
-        <article class="format" data-format-slide>
-          <figure class="format__img"><img src="assets/img/counter-tall.jpg" alt="Fresh snacks at the Malgudi counter" loading="lazy"></figure>
-          <div class="format__body">
-            <div class="format__head"><h3>Hot Snacks</h3><span class="format__idx">02 / 03</span></div>
-            <ul class="format__rows">
+        </div>
+      </article>
+      <article class="format-slide" style="--slide-bg:var(--ivory)">
+        <div class="format-slide__reveal">
+          <figure class="format-slide__img"><img src="assets/img/counter-tall.jpg" alt="Fresh snacks at the Malgudi counter" loading="lazy"></figure>
+          <div class="format-slide__content">
+            <p class="descriptor">Three ways to take a break</p>
+            <div class="format-slide__head"><h2>Hot Snacks</h2><span class="format-slide__idx">02 / 03</span></div>
+            <ul class="format-slide__rows">
               <li><span>Star item</span><strong>Sabudana Wada (3 pcs) · ₹40</strong></li>
               <li><span>Fresh-fried</span><strong>Punugulu · ₹40</strong></li>
               <li><span>Samosas from</span><strong>₹25</strong></li>
             </ul>
           </div>
-        </article>
-        <article class="format" data-format-slide>
-          <figure class="format__img"><img src="assets/img/sticky-notes.jpg" alt="The try-our-new board by the sticky-note wall" loading="lazy"></figure>
-          <div class="format__body">
-            <div class="format__head"><h3>Sweets &amp; New</h3><span class="format__idx">03 / 03</span></div>
-            <ul class="format__rows">
+        </div>
+      </article>
+      <article class="format-slide" style="--slide-bg:var(--white)">
+        <div class="format-slide__reveal">
+          <figure class="format-slide__img"><img src="assets/img/sticky-notes.jpg" alt="The try-our-new board by the sticky-note wall" loading="lazy"></figure>
+          <div class="format-slide__content">
+            <p class="descriptor">Three ways to take a break</p>
+            <div class="format-slide__head"><h2>Sweets &amp; New</h2><span class="format-slide__idx">03 / 03</span></div>
+            <ul class="format-slide__rows">
               <li><span>From the whiteboard</span><strong>Brownie · ₹60</strong></li>
               <li><span>Atreyapuram classic</span><strong>Bobbatlu · ₹35</strong></li>
               <li><span>Combos from</span><strong>Maska Bun + Tea · ₹70</strong></li>
             </ul>
           </div>
-        </article>
-      </div>
+        </div>
+      </article>
     </div>
   </section>
+
+</div><!-- /.hero-transition -->
+
+<div class="cupflight" data-cup-flight>
+  <!-- flight cup: spins through the package section (desktop) -->
+  <div class="cupflight__layer" aria-hidden="true">
+    <div class="cupflight__sticky">
+      <div class="cupflight__model" id="flightCup"><canvas id="flightCanvas"></canvas></div>
+    </div>
+  </div>
 
   <!-- 6 · PACKAGE 01–05 -->
   <section class="package" data-header-theme="light">
     <div class="container">
       <p class="descriptor reveal">What makes it Malgudi</p>
-      <h2 class="h2 reveal">Five little things,<br>done properly</h2>
+      <h2 class="h2">Five little things,<br>done properly</h2>
       <div class="package__list">
         <article class="pack reveal"><span class="pack__num">01</span><div class="pack__txt"><h3>Filter coffee, the real way</h3><p>Strong, authentic South Indian filter coffee, served in traditional brass tumblers — hot enough to spark memories and conversations.</p></div><figure class="pack__img"><img src="assets/img/coffee-closeup.jpg" alt="" loading="lazy"></figure></article>
         <article class="pack reveal"><span class="pack__num">02</span><div class="pack__txt"><h3>Sabudana Wada — the star</h3><p>Reviewers name it the star item of the shop: crisp sabudana wada, three pieces for ₹40, fried fresh through the day.</p></div><figure class="pack__img"><img src="assets/img/counter-tall.jpg" alt="" loading="lazy"></figure></article>
@@ -178,6 +176,8 @@ window.__loaderFailsafe = setTimeout(function () {
     </div>
     <div class="slogan" aria-hidden="true"><p>We don't just pour coffee.<br>We pour nostalgia.</p></div>
   </section>
+
+</div><!-- /.cupflight -->
 
   <!-- 7 · TERMS & FIGURES → THE FULL MENU BOARD -->
   <section class="terms" id="menu-board" data-header-theme="light">
@@ -239,11 +239,17 @@ window.__loaderFailsafe = setTimeout(function () {
     </div>
   </section>
 
-  <!-- 8 · DIGITAL → INSIDE THE LITTLE SHOP -->
+  <!-- 8 · DIGITAL → INSIDE THE LITTLE SHOP (phone + video, .is-ending into benefits) -->
+<div class="digital-wrap" data-digital>
   <section class="inside" data-header-theme="dark">
     <div class="container inside__grid">
       <div class="inside__media">
-        <figure class="inside__frame"><img src="assets/img/counter-wide.jpg" alt="Inside Malgudi Coffee House — the counter and canopy"></figure>
+        <div class="phone-sway">
+          <div class="phone" role="img" aria-label="Video tour inside Malgudi Coffee House">
+            <div class="phone__notch" aria-hidden="true"></div>
+            <video class="phone__video" data-inside-video data-src="assets/video/inside.mp4" poster="assets/img/counter-wide.jpg" muted loop playsinline preload="none"></video>
+          </div>
+        </div>
       </div>
       <div class="inside__content">
         <p class="descriptor">Step inside</p>
@@ -262,7 +268,7 @@ window.__loaderFailsafe = setTimeout(function () {
   <section class="benefits" id="reviews" data-header-theme="light">
     <div class="container">
       <p class="descriptor reveal">Word of mouth</p>
-      <h2 class="h2 reveal">What visitors say</h2>
+      <h2 class="h2">What visitors say</h2>
       <div class="benefits__grid">
         <article class="benefit" data-benefit>
           <figure class="benefit__img"><img src="assets/img/coffee-closeup.jpg" alt="" loading="lazy"></figure>
@@ -288,6 +294,8 @@ window.__loaderFailsafe = setTimeout(function () {
       </div>
     </div>
   </section>
+
+</div><!-- /.digital-wrap -->
 
   <!-- 10 · STICKY GALLERY -->
   <section class="gallery" aria-label="Photos of the shop">
@@ -332,7 +340,7 @@ window.__loaderFailsafe = setTimeout(function () {
     <div class="container cta__grid">
       <div class="cta__txt">
         <p class="descriptor">Next train, next kaapi</p>
-        <h2 class="h2">Plan your visit</h2>
+        <h2 class="h2" data-heading>Plan your visit</h2>
         <p class="cta__lead">Tell us when you're passing through KPHB — we'll keep the tumbler warm. (This little form is a note to yourself: the shop takes walk-ins only, no bookings needed.)</p>
         <figure class="cta__img"><img src="assets/img/coffee-closeup.jpg" alt="" loading="lazy"></figure>
       </div>
@@ -367,7 +375,9 @@ window.__loaderFailsafe = setTimeout(function () {
       <p class="footer__note">Dine-in &amp; takeaway · Prices from the shop's own menu board, Oct 2026.</p>
     </div>
   </div>
-  <div class="footer__word" aria-hidden="true">MALGUDI</div>
+  <div class="footer__fill">
+    <div class="footer__wordwrap"><div class="footer__word" aria-hidden="true">MALGUDI</div></div>
+  </div>
   <div class="container footer__base">
     <span>© 2026 Malgudi Coffee House</span>
     <span>A tiny tribute page for a tiny shop.</span>
@@ -406,5 +416,7 @@ window.__loaderFailsafe = setTimeout(function () {
 <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
 <script src="assets/js/vendor/lenis.min.js"></script>
 <script src="assets/js/main.js"></script>
+<script type="importmap">{"imports":{"three":"./assets/js/vendor/three/three.module.min.js","three/addons/":"./assets/js/vendor/three/addons/"}}</script>
+<script type="module" src="assets/js/cup3d.js"></script>
 </body>
 </html>
