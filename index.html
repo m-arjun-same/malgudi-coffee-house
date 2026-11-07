@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Malgudi Coffee House — Filter Coffee at KPHB Metro, Hyderabad</title>
+<meta name="description" content="Malgudi Coffee House — a nostalgic South Indian coffee nook inside KPHB Metro Station, Hyderabad. Filter coffee ₹35 in brass tumblers, sabudana wada, fresh snacks. Open daily 7:30 AM – 10:30 PM.">
+<meta name="theme-color" content="#262626">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23262626'/%3E%3Ctext x='32' y='44' font-family='Arial Black' font-size='34' fill='%23df6341' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/main.css">
+<script>
+/* Preloader failsafe: never trap the page on the loader */
+window.__loaderFailsafe = setTimeout(function () {
+  var p = document.getElementById('preloader');
+  if (p) { p.classList.add('is-done'); setTimeout(function(){ if(p.parentNode) p.parentNode.removeChild(p); }, 600); }
+  document.documentElement.classList.add('is-loaded');
+}, 7000);
+</script>
+</head>
+<body>
+
+<div class="noise" aria-hidden="true"></div>
+
+<!-- 1 · PRELOADER -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__logo"><span>MALGUDI</span></div>
+  <div class="preloader__count"><span id="preCount">0</span>%</div>
+</div>
+
+<!-- 2 · HEADER + MENU -->
+<header class="header" id="header">
+  <a class="header__logo" href="#top" data-scroll>MALGUDI<sup>®</sup></a>
+  <div class="header__meta">KPHB Metro · Hyderabad</div>
+  <div class="header__actions">
+    <button class="btn btn--small header__cta" data-open-modal type="button">Plan a visit</button>
+    <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<nav class="menu" id="menu" aria-hidden="true">
+  <div class="menu__inner">
+    <ul class="menu__list">
+      <li><a href="#menu-board" data-scroll>Menu</a></li>
+      <li><a href="#story" data-scroll>Our Story</a></li>
+      <li><a href="#reviews" data-scroll>Reviews</a></li>
+      <li><a href="#faq" data-scroll>FAQ</a></li>
+      <li><a href="#visit" data-scroll>Visit Us</a></li>
+    </ul>
+    <div class="menu__foot">
+      <p>Metro Station, Concourse Level, KPHB,<br>Kukatpally, Hyderabad 500072</p>
+      <p>Open every day · 7:30 AM – 10:30 PM</p>
+      <a class="menu__map" href="https://maps.app.goo.gl/7HMQjGrse8VTk4Qv5" target="_blank" rel="noopener">Find us on Google Maps ↗</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- 3 · HERO -->
+  <section class="hero" data-header-theme="dark">
+    <div class="container hero__inner">
+      <p class="descriptor reveal">Coffee House — est. inside KPHB Metro Station</p>
+      <h1 class="hero__title reveal">Real filter coffee for ₹35, in the middle of your commute.</h1>
+      <div class="hero__row">
+        <a class="btn reveal" href="#menu-board" data-scroll>See the menu</a>
+        <ul class="hero__points">
+          <li class="reveal"><strong>4.7★</strong><span>rated on Google by 120+ visitors</span></li>
+          <li class="reveal"><strong>7:30–10:30</strong><span>open every single day, inside the metro</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hero__marquee" aria-hidden="true">
+      <div class="hero__track">
+        <span class="hero__word">MALGUDI</span><span class="hero__word">MALGUDI</span><span class="hero__word">MALGUDI</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3b · CUP STAGE (sticky scrub visual) -->
+  <section class="cupstage" id="cupstage" aria-label="At the counter">
+    <div class="cupstage__sticky">
+      <figure class="cupstage__frame">
+        <img class="cupstage__img cupstage__img--a" src="assets/img/counter-wide.jpg" alt="The Malgudi Coffee House counter inside KPHB Metro Station">
+        <img class="cupstage__img cupstage__img--b" src="assets/img/coffee-closeup.jpg" alt="Filter coffee served in a traditional tumbler and davara">
+        <div class="cupstage__tumbler" aria-hidden="true">
+          <svg viewBox="0 0 200 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="brass" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#8a6d3f"/><stop offset=".28" stop-color="#e6c887"/><stop offset=".55" stop-color="#b28c4e"/><stop offset=".8" stop-color="#dfc084"/><stop offset="1" stop-color="#7d6236"/>
+              </linearGradient>
+              <linearGradient id="brassBowl" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#7d6236"/><stop offset=".3" stop-color="#d9b96f"/><stop offset=".6" stop-color="#a37f42"/><stop offset="1" stop-color="#8a6d3f"/>
+              </linearGradient>
+            </defs>
+            <ellipse cx="100" cy="170" rx="74" ry="13" fill="#000" opacity=".35"/>
+            <path d="M30 128 Q100 152 170 128 L160 158 Q100 178 40 158 Z" fill="url(#brassBowl)"/>
+            <path d="M58 62 L70 128 Q72 140 84 140 L116 140 Q128 140 130 128 L142 62 Z" fill="url(#brass)"/>
+            <path d="M58 62 L142 62 L139 82 L61 82 Z" fill="#e9d096" opacity=".8"/>
+            <ellipse cx="100" cy="62" rx="42" ry="9" fill="#6d5327"/>
+            <ellipse cx="100" cy="60" rx="38" ry="7.5" fill="#4a2f1d"/>
+            <path d="M82 44 Q88 30 82 16 M100 46 Q106 32 100 18 M118 44 Q124 30 118 16" stroke="#f3f1e9" stroke-width="4" stroke-linecap="round" opacity=".85" fill="none"/>
+          </svg>
+        </div>
+        <figcaption class="cupstage__cap descriptor">Poured the old way — brass tumbler &amp; davara</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 4 · IN EXACT FIGURES -->
+  <section class="figures" id="story" data-header-theme="light">
+    <div class="container">
+      <p class="descriptor reveal">Our story, in exact figures</p>
+      <h2 class="h2 reveal">A little shop,<br>in exact figures</h2>
+      <div class="figures__grid">
+        <article class="figure reveal"><div class="figure__num"><span data-count="4.7" data-decimals="1">0</span>★</div><p>Google rating for this tiny metro-station nook.</p></article>
+        <article class="figure reveal"><div class="figure__num"><span data-count="120">0</span>+</div><p>Google reviews — and counting, one kaapi at a time.</p></article>
+        <article class="figure reveal"><div class="figure__num"><span data-count="15">0</span> hrs</div><p>Open every day, 7:30 in the morning to 10:30 at night.</p></article>
+        <article class="figure reveal"><div class="figure__num">₹<span data-count="35">0</span></div><p>For a filter coffee the way it has always been made.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 · FORMATS → THREE WAYS TO TAKE A BREAK -->
+  <section class="formats" data-header-theme="light">
+    <div class="container">
+      <p class="descriptor reveal">Three ways to take a break</p>
+      <h2 class="h2 reveal">Pick your pause</h2>
+      <div class="formats__list">
+        <article class="format" data-format-slide>
+          <figure class="format__img"><img src="assets/img/coffee-closeup.jpg" alt="Filter coffee in a tumbler" loading="lazy"></figure>
+          <div class="format__body">
+            <div class="format__head"><h3>Kaapi &amp; Tea</h3><span class="format__idx">01 / 03</span></div>
+            <ul class="format__rows">
+              <li><span>Star pour</span><strong>Filter Coffee · ₹35</strong></li>
+              <li><span>Teas from</span><strong>₹25</strong></li>
+              <li><span>Comfort cup</span><strong>Hot Badam Milk · ₹40</strong></li>
+            </ul>
+          </div>
+        </article>
+        <article class="format" data-format-slide>
+          <figure class="format__img"><img src="assets/img/counter-tall.jpg" alt="Fresh snacks at the Malgudi counter" loading="lazy"></figure>
+          <div class="format__body">
+            <div class="format__head"><h3>Hot Snacks</h3><span class="format__idx">02 / 03</span></div>
+            <ul class="format__rows">
+              <li><span>Star item</span><strong>Sabudana Wada (3 pcs) · ₹40</strong></li>
+              <li><span>Fresh-fried</span><strong>Punugulu · ₹40</strong></li>
+              <li><span>Samosas from</span><strong>₹25</strong></li>
+            </ul>
+          </div>
+        </article>
+        <article class="format" data-format-slide>
+          <figure class="format__img"><img src="assets/img/sticky-notes.jpg" alt="The try-our-new board by the sticky-note wall" loading="lazy"></figure>
+          <div class="format__body">
+            <div class="format__head"><h3>Sweets &amp; New</h3><span class="format__idx">03 / 03</span></div>
+            <ul class="format__rows">
+              <li><span>From the whiteboard</span><strong>Brownie · ₹60</strong></li>
+              <li><span>Atreyapuram classic</span><strong>Bobbatlu · ₹35</strong></li>
+              <li><span>Combos from</span><strong>Maska Bun + Tea · ₹70</strong></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · PACKAGE 01–05 -->
+  <section class="package" data-header-theme="light">
+    <div class="container">
+      <p class="descriptor reveal">What makes it Malgudi</p>
+      <h2 class="h2 reveal">Five little things,<br>done properly</h2>
+      <div class="package__list">
+        <article class="pack reveal"><span class="pack__num">01</span><div class="pack__txt"><h3>Filter coffee, the real way</h3><p>Strong, authentic South Indian filter coffee, served in traditional brass tumblers — hot enough to spark memories and conversations.</p></div><figure class="pack__img"><img src="assets/img/coffee-closeup.jpg" alt="" loading="lazy"></figure></article>
+        <article class="pack reveal"><span class="pack__num">02</span><div class="pack__txt"><h3>Sabudana Wada — the star</h3><p>Reviewers name it the star item of the shop: crisp sabudana wada, three pieces for ₹40, fried fresh through the day.</p></div><figure class="pack__img"><img src="assets/img/counter-tall.jpg" alt="" loading="lazy"></figure></article>
+        <article class="pack reveal"><span class="pack__num">03</span><div class="pack__txt"><h3>Fresh-fried snacks</h3><p>Samosas, punugulu, masala wada and pakodas lined up in the glass display case — classic snacks, fresh and flavourful.</p></div><figure class="pack__img"><img src="assets/img/menu-boards.jpg" alt="" loading="lazy"></figure></article>
+        <article class="pack reveal"><span class="pack__num">04</span><div class="pack__txt"><h3>A corner of Malgudi Days</h3><p>A vintage nook inside KPHB Metro Station — aged wooden tables, cane-back chairs and décor that feels like stepping into R.K. Narayan's Malgudi.</p></div><figure class="pack__img"><img src="assets/img/interior-collage.jpg" alt="" loading="lazy"></figure></article>
+        <article class="pack reveal"><span class="pack__num">05</span><div class="pack__txt"><h3>Pocket-friendly, always</h3><p>The whole board sits between ₹25 and ₹80 — great quality at prices reviewers call the best part of the visit.</p></div><figure class="pack__img"><img src="assets/img/sticky-notes.jpg" alt="" loading="lazy"></figure></article>
+      </div>
+    </div>
+    <div class="slogan" aria-hidden="true"><p>We don't just pour coffee.<br>We pour nostalgia.</p></div>
+  </section>
+
+  <!-- 7 · TERMS & FIGURES → THE FULL MENU BOARD -->
+  <section class="terms" id="menu-board" data-header-theme="light">
+    <div class="container terms__grid">
+      <div class="terms__media">
+        <figure class="terms__imgwrap"><img src="assets/img/menu-boards.jpg" alt="The Malgudi Coffee House menu boards above the counter"></figure>
+        <p class="descriptor">The menu board — latest prices, Oct 2026</p>
+      </div>
+      <div class="terms__content">
+        <p class="descriptor">Menu · Terms &amp; figures</p>
+        <h2 class="h2">Everything on the board</h2>
+
+        <h3 class="terms__group">Kaapi &amp; Tea</h3>
+        <ul class="terms__rows">
+          <li><span>Filter Coffee</span><strong>₹35</strong></li>
+          <li><span>Tea</span><strong>₹25</strong></li>
+          <li><span>Ginger Tea</span><strong>₹30</strong></li>
+          <li><span>Elachi Tea</span><strong>₹30</strong></li>
+          <li><span>Lemon Tea</span><strong>₹30</strong></li>
+          <li><span>Badam Tea</span><strong>₹35</strong></li>
+          <li><span>Green Tea</span><strong>₹35</strong></li>
+          <li><span>Boost</span><strong>₹35</strong></li>
+          <li><span>Horlicks</span><strong>₹35</strong></li>
+          <li><span>Hot Badam Milk</span><strong>₹40</strong></li>
+          <li><span>Cold Badam Milk</span><strong>₹60</strong></li>
+          <li><span>Rose Milk</span><strong>₹60</strong></li>
+        </ul>
+
+        <h3 class="terms__group">Hot Snacks</h3>
+        <ul class="terms__rows">
+          <li><span>Aloo Samosa</span><strong>₹25</strong></li>
+          <li><span>Veg or Egg Puff</span><strong>₹30</strong></li>
+          <li><span>Sabudana Wada (3 pcs) — star item</span><strong>₹40</strong></li>
+          <li><span>Punugulu</span><strong>₹40</strong></li>
+          <li><span>Maddur Wada (1 pc)</span><strong>₹30</strong></li>
+          <li><span>Masala Wada (3 pcs)</span><strong>₹40</strong></li>
+          <li><span>Corn or Onion Samosa (4 pcs)</span><strong>₹35</strong></li>
+          <li><span>Onion Pakoda</span><strong>₹40</strong></li>
+        </ul>
+
+        <h3 class="terms__group">Try Our New — from the whiteboard</h3>
+        <ul class="terms__rows">
+          <li><span>Hibiscus Tea (no caffeine)</span><strong>₹35</strong></li>
+          <li><span>Blue Pea Tea (no caffeine)</span><strong>₹40</strong></li>
+          <li><span>Mango Lassi</span><strong>₹60</strong></li>
+          <li><span>Bun Maska</span><strong>₹60</strong></li>
+          <li><span>Maska Bun + Tea combo</span><strong>₹70</strong></li>
+          <li><span>Maska Bun + Hot Badam Milk combo</span><strong>₹80</strong></li>
+          <li><span>Bobbatlu</span><strong>₹35</strong></li>
+          <li><span>Dry Fruit Putarekulu (Atreyapuram)</span><strong>₹35</strong></li>
+          <li><span>Banana Cake</span><strong>₹30</strong></li>
+          <li><span>Ghee Rava Cake</span><strong>₹30</strong></li>
+          <li><span>Muffins</span><strong>₹35</strong></li>
+          <li><span>Brownie</span><strong>₹60</strong></li>
+        </ul>
+
+        <p class="terms__note">Also famous for — <strong>Thatte Idli · Dum Chai · Nendram Chips</strong>. Ask at the counter for today's price.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 · DIGITAL → INSIDE THE LITTLE SHOP -->
+  <section class="inside" data-header-theme="dark">
+    <div class="container inside__grid">
+      <div class="inside__media">
+        <figure class="inside__frame"><img src="assets/img/counter-wide.jpg" alt="Inside Malgudi Coffee House — the counter and canopy"></figure>
+      </div>
+      <div class="inside__content">
+        <p class="descriptor">Step inside</p>
+        <h2 class="h2">Inside the<br>little shop</h2>
+        <ul class="inside__features">
+          <li><h3>Brass tumblers, on the shelf</h3><p>Coffee arrives in a traditional brass tumbler and davara — and the shelves behind the counter gleam with brassware.</p></li>
+          <li><h3>The sticky-note wall</h3><p>Hundreds of handwritten notes from visitors cover the walls — leave one of your own with your kaapi.</p></li>
+          <li><h3>The Ganesh corner</h3><p>A brass Ganesh idol and framed artwork watch over the counter, with a small shrine by the fridge.</p></li>
+          <li><h3>Checkered floors, cane chairs</h3><p>Black-and-white checkered floor, dark-wood and cane-back chairs, a red-tiled canopy and marigold garlands overhead.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 · BENEFITS → REVIEWS -->
+  <section class="benefits" id="reviews" data-header-theme="light">
+    <div class="container">
+      <p class="descriptor reveal">Word of mouth</p>
+      <h2 class="h2 reveal">What visitors say</h2>
+      <div class="benefits__grid">
+        <article class="benefit" data-benefit>
+          <figure class="benefit__img"><img src="assets/img/coffee-closeup.jpg" alt="" loading="lazy"></figure>
+          <div class="benefit__metric">4.7★</div>
+          <h3>Strong &amp; authentic</h3>
+          <blockquote>“Their filter coffee is strong, authentic, and served in traditional brass tumblers — hot enough to spark memories and conversations.”</blockquote>
+          <p class="benefit__who">— Google review</p>
+        </article>
+        <article class="benefit" data-benefit>
+          <figure class="benefit__img"><img src="assets/img/counter-tall.jpg" alt="" loading="lazy"></figure>
+          <div class="benefit__metric">Star item</div>
+          <h3>The sabudana wada</h3>
+          <blockquote>“They have snacks, coffee, tea — and their star item is sabudana vada, which is very delicious.”</blockquote>
+          <p class="benefit__who">— Chandra S., Google review</p>
+        </article>
+        <article class="benefit" data-benefit>
+          <figure class="benefit__img"><img src="assets/img/interior-collage.jpg" alt="" loading="lazy"></figure>
+          <div class="benefit__metric">Nostalgia</div>
+          <h3>A childhood memory</h3>
+          <blockquote>“Very cute tiny space with aged tables and chairs which brings old memories of childhood… coffee tasted nostalgic.”</blockquote>
+          <p class="benefit__who">— Vidya sagar V., Google review</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 · STICKY GALLERY -->
+  <section class="gallery" aria-label="Photos of the shop">
+    <figure class="gallery__item"><img src="assets/img/counter-wide.jpg" alt="Wide view of the Malgudi counter, staff at work"><figcaption>The counter, mid-service</figcaption></figure>
+    <figure class="gallery__item"><img src="assets/img/menu-boards.jpg" alt="Menu boards above the counter"><figcaption>The boards, above the counter</figcaption></figure>
+    <figure class="gallery__item"><img src="assets/img/sticky-notes.jpg" alt="The whiteboard menu in front of the sticky-note wall"><figcaption>Try-our-new board &amp; the note wall</figcaption></figure>
+    <figure class="gallery__item"><img src="assets/img/interior-collage.jpg" alt="Interior, checkered floor and a tumbler of filter coffee"><figcaption>Checkered floors &amp; a fresh pour</figcaption></figure>
+  </section>
+
+  <!-- 11 · FAQ -->
+  <section class="faq" id="faq" data-header-theme="light">
+    <div class="container">
+      <p class="descriptor reveal">Good to know</p>
+      <h2 class="h2 reveal">Questions,<br>answered</h2>
+      <div class="faq__list">
+        <details class="faq__item">
+          <summary><span class="faq__num">01</span><span class="faq__q">Where exactly is the shop?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+          <div class="faq__body"><div class="faq__inner"><p>Inside KPHB Metro Station, on the Concourse Level — K P H B Phase 1, Kukatpally, Hyderabad 500072. Step off the metro and the counter is right there in the station.</p></div></div>
+        </details>
+        <details class="faq__item">
+          <summary><span class="faq__num">02</span><span class="faq__q">When is it open?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+          <div class="faq__body"><div class="faq__inner"><p>Every day, 7:30 AM to 10:30 PM — morning commuters and evening travellers alike.</p></div></div>
+        </details>
+        <details class="faq__item">
+          <summary><span class="faq__num">03</span><span class="faq__q">What is it famous for?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+          <div class="faq__body"><div class="faq__inner"><p>South Indian filter coffee in brass tumblers, and the star snack — sabudana wada. Dum chai, thatte idli, punugulu and nendram chips round out the regulars' list.</p></div></div>
+        </details>
+        <details class="faq__item">
+          <summary><span class="faq__num">04</span><span class="faq__q">How much will I spend?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+          <div class="faq__body"><div class="faq__inner"><p>Very little — the menu runs from ₹25 to ₹80, and listings put a visit at roughly ₹1–200 per person. Filter coffee is ₹35.</p></div></div>
+        </details>
+        <details class="faq__item">
+          <summary><span class="faq__num">05</span><span class="faq__q">Can I sit in, or only take away?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+          <div class="faq__body"><div class="faq__inner"><p>Both. It's a small, cozy dine-in nook with aged tables and chairs — and everything travels well if your train is calling.</p></div></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12 · CTA FORM -->
+  <section class="cta" id="plan" data-header-theme="dark">
+    <div class="container cta__grid">
+      <div class="cta__txt">
+        <p class="descriptor">Next train, next kaapi</p>
+        <h2 class="h2">Plan your visit</h2>
+        <p class="cta__lead">Tell us when you're passing through KPHB — we'll keep the tumbler warm. (This little form is a note to yourself: the shop takes walk-ins only, no bookings needed.)</p>
+        <figure class="cta__img"><img src="assets/img/coffee-closeup.jpg" alt="" loading="lazy"></figure>
+      </div>
+      <form class="visit-form" data-visit-form novalidate>
+        <label class="field"><span>Your name *</span><input type="text" name="name" autocomplete="name" required><em class="field__err" data-err></em></label>
+        <label class="field"><span>Phone *</span><input type="tel" name="phone" autocomplete="tel" required><em class="field__err" data-err></em></label>
+        <div class="field__row">
+          <label class="field"><span>Date</span><input type="date" name="date"><em class="field__err" data-err></em></label>
+          <label class="field"><span>Time</span><input type="time" name="time" min="07:30" max="22:30"><em class="field__err" data-err></em></label>
+        </div>
+        <label class="consent"><input type="checkbox" name="consent" required><span>I agree to be contacted about this visit. *</span></label>
+        <em class="field__err" data-err-form></em>
+        <button class="btn btn--light" type="submit">Save my visit</button>
+        <p class="visit-form__status" data-status role="status"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- 13 · FOOTER -->
+<footer class="footer" id="visit" data-header-theme="dark">
+  <div class="container footer__grid">
+    <div class="footer__col">
+      <p class="descriptor">Visit us</p>
+      <p class="footer__big">Metro Station, Concourse Level,<br>KPHB, Kukatpally,<br>Hyderabad 500072</p>
+      <a class="btn btn--light" href="https://maps.app.goo.gl/7HMQjGrse8VTk4Qv5" target="_blank" rel="noopener">Get directions ↗</a>
+    </div>
+    <div class="footer__col">
+      <p class="descriptor">Hours</p>
+      <p class="footer__big">Every day<br>7:30 AM – 10:30 PM</p>
+      <p class="footer__note">Dine-in &amp; takeaway · Prices from the shop's own menu board, Oct 2026.</p>
+    </div>
+  </div>
+  <div class="footer__word" aria-hidden="true">MALGUDI</div>
+  <div class="container footer__base">
+    <span>© 2026 Malgudi Coffee House</span>
+    <span>A tiny tribute page for a tiny shop.</span>
+  </div>
+</footer>
+
+<!-- MODAL (duplicate visit form) -->
+<div class="modal" id="visitModal" aria-hidden="true" role="dialog" aria-label="Plan your visit">
+  <div class="modal__backdrop" data-close-modal></div>
+  <div class="modal__panel">
+    <button class="modal__close" data-close-modal type="button" aria-label="Close">✕</button>
+    <p class="descriptor">Next train, next kaapi</p>
+    <h2 class="h2 h2--small">Plan your visit</h2>
+    <form class="visit-form" data-visit-form novalidate>
+      <label class="field"><span>Your name *</span><input type="text" name="name" autocomplete="name" required><em class="field__err" data-err></em></label>
+      <label class="field"><span>Phone *</span><input type="tel" name="phone" autocomplete="tel" required><em class="field__err" data-err></em></label>
+      <div class="field__row">
+        <label class="field"><span>Date</span><input type="date" name="date"><em class="field__err" data-err></em></label>
+        <label class="field"><span>Time</span><input type="time" name="time" min="07:30" max="22:30"><em class="field__err" data-err></em></label>
+      </div>
+      <label class="consent"><input type="checkbox" name="consent" required><span>I agree to be contacted about this visit. *</span></label>
+      <em class="field__err" data-err-form></em>
+      <button class="btn" type="submit">Save my visit</button>
+      <p class="visit-form__status" data-status role="status"></p>
+    </form>
+  </div>
+</div>
+
+<!-- 14 · COOKIE BANNER -->
+<div class="cookies" id="cookies" hidden>
+  <p>We use one small cookie to remember your visit plan on this device. No tracking, no ads.</p>
+  <button class="btn btn--small" id="cookieOk" type="button">Okay</button>
+</div>
+
+<script src="assets/js/vendor/gsap.min.js"></script>
+<script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/js/vendor/lenis.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
